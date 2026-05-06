@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://er3jo0mw7xph"
+path="res://.godot/imported/food_ingredient_carrot_chopped.obj-36e067acf034bb35f9a8ccc62e869cdc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/food_ingredient_carrot_chopped.obj-36e067acf034bb35f9a8ccc62e869cdc.mesh"]
+
+source_file="res://KayKit_Restaurant_Bits_1.0_FREE/Assets/obj/food_ingredient_carrot_chopped.obj"
+dest_files=["res://.godot/imported/food_ingredient_carrot_chopped.obj-36e067acf034bb35f9a8ccc62e869cdc.mesh", "res://.godot/imported/food_ingredient_carrot_chopped.obj-36e067acf034bb35f9a8ccc62e869cdc.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

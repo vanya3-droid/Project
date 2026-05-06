@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cicvjot3sghsy"
+path="res://.godot/imported/OMFG_Hello_SNC-251978848 copy.mp3-71a531c2ef4a7c6ab7bb0d3fbd99aac8.mp3str"
+
+[deps]
+
+source_file="res://OMFG_Hello_SNC-251978848 copy.mp3"
+dest_files=["res://.godot/imported/OMFG_Hello_SNC-251978848 copy.mp3-71a531c2ef4a7c6ab7bb0d3fbd99aac8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

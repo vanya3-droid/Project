@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://mgp02mkor0at"]
+
+[ext_resource type="PackedScene" uid="uid://bhidstvjav8l4" path="res://Models/gltf/building_A.gltf" id="1_building_a"]
+[ext_resource type="PackedScene" uid="uid://dnylfw6xvghf2" path="res://Models/gltf/building_B.gltf" id="2_building_b"]
+[ext_resource type="PackedScene" uid="uid://c0guuoe6ylh02" path="res://Models/gltf/building_C.gltf" id="3_building_c"]
+[ext_resource type="PackedScene" uid="uid://cg8v2warki2yx" path="res://Models/gltf/building_D.gltf" id="4_building_d"]
+[ext_resource type="PackedScene" uid="uid://24i7jd00o7kj" path="res://Models/gltf/building_E.gltf" id="5_building_e"]
+[ext_resource type="PackedScene" uid="uid://diuku453hbtuy" path="res://Models/gltf/building_F.gltf" id="6_building_f"]
+[ext_resource type="PackedScene" uid="uid://be8l7rr3646l1" path="res://Models/gltf/building_G.gltf" id="7_building_g"]
+[ext_resource type="PackedScene" uid="uid://blwhe7sxsx416" path="res://Models/gltf/building_H.gltf" id="8_building_h"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a202f"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_noarx"]
+sky_material = SubResource("ProceduralSkyMaterial_a202f")
+
+[sub_resource type="Environment" id="Environment_a0tk4"]
+background_mode = 2
+sky = SubResource("Sky_noarx")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Node3D" type="Node3D" unique_id=1241927200]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=239120872]
+environment = SubResource("Environment_a0tk4")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1996319177]
+transform = Transform3D(1, -3.7247414e-08, 1.7083208e-07, 0, 0.9770456, 0.21303038, -1.7484555e-07, -0.21303038, 0.9770456, 0, 0, 0)
+light_energy = 2.05
+shadow_enabled = true
+directional_shadow_max_distance = 110.0
+
+[node name="Floor" type="CSGBox3D" parent="." unique_id=367711200]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5392976, -2.2655058, -4.9847517)
+use_collision = true
+size = Vector3(50, 1, 50)
+
+[node name="BuildingSquare" type="Node3D" parent="." unique_id=141175787]
+
+[node name="Building01" parent="BuildingSquare" unique_id=1800124756 instance=ExtResource("1_building_a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -1.7655058, -6)
+
+[node name="Building02" parent="BuildingSquare" unique_id=328383041 instance=ExtResource("2_building_b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1.7655058, -6)
+
+[node name="Building03" parent="BuildingSquare" unique_id=1905750349 instance=ExtResource("3_building_c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1.7655058, -6)
+
+[node name="Building04" parent="BuildingSquare" unique_id=1622336131 instance=ExtResource("4_building_d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -1.7655058, -6)
+
+[node name="Building05" parent="BuildingSquare" unique_id=1661230506 instance=ExtResource("5_building_e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -1.7655058, -2)
+
+[node name="Building06" parent="BuildingSquare" unique_id=476831213 instance=ExtResource("6_building_f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -1.7655058, -2)
+
+[node name="Building07" parent="BuildingSquare" unique_id=1348978570 instance=ExtResource("7_building_g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -1.7655058, 2)
+
+[node name="Building08" parent="BuildingSquare" unique_id=1623584766 instance=ExtResource("8_building_h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -1.7655058, 2)
+
+[node name="Building09" parent="BuildingSquare" unique_id=1049526480 instance=ExtResource("1_building_a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -1.7655058, 6)
+
+[node name="Building10" parent="BuildingSquare" unique_id=608323185 instance=ExtResource("2_building_b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1.7655058, 6)
+
+[node name="Building11" parent="BuildingSquare" unique_id=1830781218 instance=ExtResource("3_building_c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1.7655058, 6)
+
+[node name="Building12" parent="BuildingSquare" unique_id=231992514 instance=ExtResource("4_building_d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -1.7655058, 6)

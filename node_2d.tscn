@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ljggaeh6wcbl"]
+
+[ext_resource type="Texture2D" path="res://photo_2026-05-06_20-31-01.jpg" id="1_wtcfe"]
+
+[node name="Node2D" type="Node2D" unique_id=1470803759]
+
+[node name="Photo20260506203101" type="Sprite2D" parent="." unique_id=2132785102]
+position = Vector2(2305, 1527.25)
+scale = Vector2(3.8453128, 3.4700103)
+texture = ExtResource("1_wtcfe")
+
+[node name="Camera2D" type="Camera2D" parent="Photo20260506203101" unique_id=187315511]
+scale = Vector2(1748.5886, -64318.645)
+
+[node name="Label" type="Label" parent="." unique_id=1531860576]
+offset_left = 547.0
+offset_top = 1533.0
+offset_right = 850.7464
+offset_bottom = 1691.429
+scale = Vector2(36.391308, 63.52033)
+text = "THANK YOU!!"

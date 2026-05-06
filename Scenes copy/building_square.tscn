@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://bp64owj31j6h3"]
+
+[ext_resource type="PackedScene" path="res://Models/gltf/building_A.gltf" id="1_building_a"]
+[ext_resource type="PackedScene" path="res://Models/gltf/building_B.gltf" id="2_building_b"]
+[ext_resource type="PackedScene" path="res://Models/gltf/building_C.gltf" id="3_building_c"]
+[ext_resource type="PackedScene" path="res://Models/gltf/building_D.gltf" id="4_building_d"]
+[ext_resource type="PackedScene" path="res://Models/gltf/building_E.gltf" id="5_building_e"]
+[ext_resource type="PackedScene" path="res://Models/gltf/building_F.gltf" id="6_building_f"]
+[ext_resource type="PackedScene" path="res://Models/gltf/building_G.gltf" id="7_building_g"]
+[ext_resource type="PackedScene" path="res://Models/gltf/building_H.gltf" id="8_building_h"]
+[ext_resource type="PackedScene" path="res://Addons/proto_controller/proto_controller.tscn" id="9_proto_controller"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a202f"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_noarx"]
+sky_material = SubResource("ProceduralSkyMaterial_a202f")
+
+[sub_resource type="Environment" id="Environment_a0tk4"]
+background_mode = 2
+sky = SubResource("Sky_noarx")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="BuildingSquareScene" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_a0tk4")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, -3.7247414e-08, 1.7083208e-07, 0, 0.9770456, 0.21303038, -1.7484555e-07, -0.21303038, 0.9770456, 0, 0, 0)
+light_energy = 2.05
+shadow_enabled = true
+directional_shadow_max_distance = 110.0
+
+[node name="Floor" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5392976, -2.2655058, -4.9847517)
+use_collision = true
+size = Vector3(50, 1, 50)
+
+[node name="Player" parent="." instance=ExtResource("9_proto_controller")]
+transform = Transform3D(0.9953962, 0, -0.09584575, 0, 1, 0, 0.09584575, 0, 0.9953962, 0, 1.2, 16)
+
+[node name="BuildingSquare" type="Node3D" parent="."]
+
+[node name="Building01" parent="BuildingSquare" instance=ExtResource("1_building_a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -1.7655058, -6)
+
+[node name="Building02" parent="BuildingSquare" instance=ExtResource("2_building_b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1.7655058, -6)
+
+[node name="Building03" parent="BuildingSquare" instance=ExtResource("3_building_c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1.7655058, -6)
+
+[node name="Building04" parent="BuildingSquare" instance=ExtResource("4_building_d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -1.7655058, -6)
+
+[node name="Building05" parent="BuildingSquare" instance=ExtResource("5_building_e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -1.7655058, -2)
+
+[node name="Building06" parent="BuildingSquare" instance=ExtResource("6_building_f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -1.7655058, -2)
+
+[node name="Building07" parent="BuildingSquare" instance=ExtResource("7_building_g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -1.7655058, 2)
+
+[node name="Building08" parent="BuildingSquare" instance=ExtResource("8_building_h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -1.7655058, 2)
+
+[node name="Building09" parent="BuildingSquare" instance=ExtResource("1_building_a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -1.7655058, 6)
+
+[node name="Building10" parent="BuildingSquare" instance=ExtResource("2_building_b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1.7655058, 6)
+
+[node name="Building11" parent="BuildingSquare" instance=ExtResource("3_building_c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1.7655058, 6)
+
+[node name="Building12" parent="BuildingSquare" instance=ExtResource("4_building_d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -1.7655058, 6)

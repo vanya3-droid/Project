@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="res://Scripts/player_s.tscn" id="1_player"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_1"]
+sky_material = SubResource("ProceduralSkyMaterial_1")
+
+[sub_resource type="Environment" id="Environment_1"]
+background_mode = 2
+sky = SubResource("Sky_1")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="UniversityScene" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_1")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0.43301272, 0.8660254, -0.24999999, -0.75, 0.5, 0.43301266, 0, 20.2, 0)
+light_color = Color(0.8980392, 0.5411765, 0.05882353, 1)
+light_energy = 3.297
+shadow_enabled = true
+
+[node name="Floor" type="CSGBox3D" parent="."]
+use_collision = true
+size = Vector3(80, 1, 80)
+
+[node name="UniversityBlock" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, -18)
+material = null
+size = Vector3(18, 6, 8)
+
+[node name="UniversityEntrance" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, -13.7)
+size = Vector3(4, 3.8, 0.6)
+operation = 2
+
+[node name="Player_S" parent="." instance=ExtResource("1_player")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 8)

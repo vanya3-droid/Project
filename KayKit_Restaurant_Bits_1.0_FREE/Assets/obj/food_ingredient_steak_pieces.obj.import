@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://nh6t4t6au0qg"
+path="res://.godot/imported/food_ingredient_steak_pieces.obj-b37d6aa81bb0a0cd8daa6b8dac1cf5ac.mesh"
+
+[deps]
+
+files=["res://.godot/imported/food_ingredient_steak_pieces.obj-b37d6aa81bb0a0cd8daa6b8dac1cf5ac.mesh"]
+
+source_file="res://KayKit_Restaurant_Bits_1.0_FREE/Assets/obj/food_ingredient_steak_pieces.obj"
+dest_files=["res://.godot/imported/food_ingredient_steak_pieces.obj-b37d6aa81bb0a0cd8daa6b8dac1cf5ac.mesh", "res://.godot/imported/food_ingredient_steak_pieces.obj-b37d6aa81bb0a0cd8daa6b8dac1cf5ac.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
